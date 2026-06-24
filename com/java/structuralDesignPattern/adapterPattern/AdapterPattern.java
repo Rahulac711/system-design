@@ -14,6 +14,8 @@ with a different interface). This structural wrapping enables integration and co
 systems.
  */
 
+import java.util.Random;
+
 interface PaymentGateway {
     void pay(double amount);
 }
@@ -27,6 +29,7 @@ class Payu implements PaymentGateway {
 
 class RazorpayApi {
     public void makePayment(double amount) {
+        Random random = new Random();
         System.out.println("Processing payment of " + amount + " through Razorpay");
     }
 }
