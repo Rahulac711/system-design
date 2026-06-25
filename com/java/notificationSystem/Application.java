@@ -6,6 +6,8 @@ import com.java.notificationSystem.entity.Push;
 import com.java.notificationSystem.entity.SMS;
 import com.java.notificationSystem.notificationFactory.DefaultNotificationFactory;
 
+import java.time.LocalDateTime;
+
 public class Application {
     public static void main(String[] args) {
         DefaultNotificationFactory defaultNotificationFactory = new DefaultNotificationFactory();
@@ -20,5 +22,7 @@ public class Application {
         dispatchNotification.dispatch(sms);
         dispatchNotification.dispatch(push);
 
+        dispatchNotification.dispatchSchedule(email, LocalDateTime.now());
+        dispatchNotification.dispatchSchedule(sms, LocalDateTime.now());
     }
 }
