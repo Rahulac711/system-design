@@ -1,4 +1,4 @@
-package StrategyAndObserver;
+package com.java.strategyAndObserver;
 
 import java.util.Scanner;
 public interface TransportStrategy {
